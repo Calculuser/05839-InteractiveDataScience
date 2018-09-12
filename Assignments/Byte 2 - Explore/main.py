@@ -56,7 +56,7 @@ def make_query(cols, values, limit):
         cols = ['*']
     for col in cols:
         if (' ' in col) == True:
-            string_cols = string_cols + ", '" + col + "'" #Columns that are more than one word need to be wrapped in single quotes
+            string_cols = string_cols + ", `" + col + "`" #Columns that are more than one word need to be wrapped in single quotes
         else:
             string_cols = string_cols + ", " + col
     string_cols = string_cols[2:len(string_cols)]
