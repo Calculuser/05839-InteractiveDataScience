@@ -107,7 +107,7 @@
 		console.log(str);
 
 	    // error checking: ignore buttons that don't have a title!
-		if (str == "") {
+		if (str === "") {
 			return;
 		}
 
@@ -136,7 +136,7 @@
 			if (buttons[button].id != null) {
 				// and that the button is selected 
 				var isPrimary = buttons[button].className.includes("btn-primary");
-				if (isPrimary && (cols.indexOf(id) == -1)) {
+				if (isPrimary && (cols.indexOf(id) === -1)) {
 					// if so, add it to our array
 					cols.push(id);
 				}
